@@ -2,7 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :home_api, HomeApi.Repo,
-  username: "postgres",
+  adapter: Ecto.Adapters.Postgres,
+  username: "admin",
   password: "postgres",
   database: "home_api_dev",
   hostname: "localhost",
