@@ -7,6 +7,7 @@ defmodule HomeApiWeb.Router do
 
   scope "/api", HomeApiWeb do
     pipe_through :api
+    resources "/homes", HomeController, except: [:new, :edit]
   end
 
   pipeline :browser do
